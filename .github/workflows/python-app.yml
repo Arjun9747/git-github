@@ -41,7 +41,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            cd /home/ubuntu/my-app
+            cd /home/ubuntu/git-github
             git pull origin main
             echo "Restarting app..."
             sudo systemctl restart my-app.service
