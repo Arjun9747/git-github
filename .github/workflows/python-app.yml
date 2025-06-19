@@ -43,5 +43,10 @@ jobs:
           script: |
             cd /home/ubuntu/git-github
             git pull origin main
-            echo "Restarting app..."
-            sudo systemctl restart my-app.service
+            echo "Restarting Python app on port 8000..."
+
+            # Kill any app already on port 8000
+            fuser -k 8000/tcp || true
+
+            # Run app in background and redirect logs
+            nohup python3 main.py > app.log 2>&
