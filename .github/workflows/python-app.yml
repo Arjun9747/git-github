@@ -49,4 +49,4 @@ jobs:
             fuser -k 8000/tcp || true
 
             # Run app in background and redirect logs
-            nohup python3 main.py > app.log 2>&1 &
+            nohup python3 app/main.py > app.log 2>&1 &
