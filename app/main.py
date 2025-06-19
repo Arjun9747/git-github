@@ -11,7 +11,7 @@ class SimpleHandler(BaseHTTPRequestHandler):
         # Prepare response data
         data = {
             "status": "OK",
-            "message": "Hello from EC2 Python server"
+            "message": "Hello from EC2 Python server, This is a test"
         }
 
         # Send JSON response
