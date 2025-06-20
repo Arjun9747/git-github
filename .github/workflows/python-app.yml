@@ -43,7 +43,7 @@ jobs:
           script: |
             echo "[+] Pulling latest code from GitHub..."
             cd /home/ubuntu/git-github
-            git fetch origin main
+            git pull origin main
             git reset --hard origin/main
 
             echo "[+] Killing any existing process on port 8000..."
